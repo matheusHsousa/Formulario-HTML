@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulario</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Cadastro de Formulário</h1>
+      <img class="logo" src="src/totvs-logo.png" alt="" />
+    </header>
+    <hr />
+
+    <div>
+      <h2 class="titulo">Solicitações</h2>
+
+      <div class="formSolicitacao">
+        <div class="inputDados">
+          <label for="dataAtual">Data de Abertura:</label>
+          <input type="date" id="dataAtual" class="inputSoli" disabled />
+        </div>
+        <div class="inputDados">
+          <label for="numero">Código:</label>
+          <input type="number" id="numero" class="inputSoli" disabled />
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <h2 class="titulo2">Dados Funcionários</h2>
+
+      <div class="tab-container">
+        <div class="tab-header">
+          <button class="tab-button active"><span>Dados Pessoais</span></button>
+          <button class="tab-button"><span>Endereço</span></button>
+        </div>
+
+        <div class="tab-content active">
+          <div class="formSolicitacaoBloco2">
+            <div class="inputDados">
+              <label for="dataAtual">Nome</label>
+              <input type="text" id="name" class="inputSoli" />
+            </div>
+            <div class="inputDados">
+                <label for="numero">CPF</label>
+                <input type="text" id="personCPF" class="inputSoli"  />
+                <span id="cpf-error" class="error"></span>
+              </div>              
+          </div>
+
+          <div class="formSolicitacaoBloco2">
+            <div class="inputDados">
+              <label for="dataNascimento">Data de Nascimento</label>
+              <input type="date" id="dataNascimento" class="inputSoli" />
+            </div>
+            
+            <div class="inputDados">
+              <label for="numero">Idade</label>
+              <input type="number" id="idade" class="inputSoli" />
+            </div>
+
+            <div class="inputDados">
+              <label for="genero">Gênero:</label>
+              <select name="genero" id="genero">
+                <option value="masculino">Masculino</option>
+                <option value="feminino">Feminino</option>
+              </select>
+            </div>
+          </div>
+          <div class="formSolicitacaoBloco2">
+            <div class="inputDados">
+              <label for="dataAtual">Celular</label>
+              <input type="text" id="personNumber" class="inputSoli" />
+            </div>
+            <div class="inputDados">
+              <label for="numero">E-mail</label>
+              <input type="text" id="email" class="inputSoli" />
+            </div>
+          </div>
+        </div>
+
+        <div class="tab-content active">
+          <div class="formSolicitacaoBloco2">
+            <div class="inputDados">
+              <label for="cep">CEP:</label>
+              <input type="text" id="cep" class="inputSoli" />
+            </div>
+            <div class="inputDados">
+              <label for="rua">Rua:</label>
+              <input type="text" id="rua" class="inputSoli" />
+            </div>
+          </div>
+
+          <div class="formSolicitacaoBloco2">
+            <div class="inputDados">
+              <label for="numero">Número:</label>
+              <input type="text" id="numero" class="inputSoli" />
+            </div>
+            <div class="inputDados">
+              <label for="complemento">Complemento:</label>
+              <input type="text" id="complemento" class="inputSoli" />
+            </div>
+          </div>
+
+          <div class="formSolicitacaoBloco2">
+            <div class="inputDados">
+              <label for="bairro">Bairro:</label>
+              <input type="text" id="bairro" class="inputSoli" />
+            </div>
+            <div class="inputDados">
+              <label for="estado">Estado:</label>
+              <input type="text" id="estado" class="inputSoli" />
+            </div>
+            <div class="inputDados">
+              <label for="municipio">Município:</label>
+              <input type="text" id="municipio" class="inputSoli" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <button onclick="cadastrarDados()">Submite</button>
+    </div>
+  </body>
+
+  <script src="script.js"></script>
+</html>
